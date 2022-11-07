@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js" type="text/javascript"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #main{
+            width: 350px;
+            height: 400px;
+            margin: 100px auto;
+            position: relative;
+            animation: xt 2s linear infinite alternate;
+        }
+        .circle1{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: red;
+        }
+        .circle2{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: red;
+        }
+        .circle3{
+            border-radius: 0;
+            position: absolute;
+            top: 75px;
+            left: 75px;
+            transform: rotate(45deg);
+        }
+        .text{
+            font-size: 20px;
+            color: white;
+            margin-top: 20px;
+            margin-left: 15px;
+            font-weight: bold;
+            letter-spacing: 10px;
+            transform: rotate(-45deg);
+        }
+        @keyframes xt{
+            0%{
+                transform: scale(1);
+            }
+            100%{
+                transform: scale(1.2);
+            }
+        }
+        .body{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 2;
+            background-color: black;
+        }
+        .text2{
+            margin-top: 5%;
+            margin-left: 800px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+        <div class="text2">这是我用代码写的第一个</div>
+        <div class="text2" id="t2" style="font-size: 25px;margin-top: 4%;margin-left: 45%;">心型</div>
+        <div class="text2" id="t3" style="font-size: 15px;margin-top: 5%;margin-left: 38%;">希望你能喜欢</div>
+        <div class="text2" id="t4" style="font-size: 30px;margin-top: -5%;margin-left: 48%;">还有</div>
+        <div class="text2" id="t5" style="font-size: 22px;margin-top: 5%;margin-left: 45%;">我不是废物！！</div>
+    </div>
+    <div id="main">
+        <div class="circle1" ></div>
+        <div class="circle2" ></div>
+        <div class="circle1 circle3" ><div class="text">高梦蝶</div></div>
+    </div>
+    <script>
+        let body=document.querySelector('.body');
+        let t1=document.querySelector('.text2');
+        let t2=document.getElementById('t2');
+        let t3=document.getElementById('t3');
+        let t4=document.getElementById('t4');
+        let t5=document.getElementById('t5');
+         setTimeout(()=>{
+            t1.style.visibility='visible';
+        },1000)
+        setTimeout(()=>{
+            t1.style.visibility='hidden';
+            t2.style.visibility='visible';
+        },2000)
+        setTimeout(()=>{
+            t2.style.visibility='hidden';
+            t3.style.visibility='visible';
+        },3000)
+        setTimeout(()=>{
+            t3.style.visibility='hidden';
+            t4.style.visibility='visible';
+        },4000)
+        setTimeout(()=>{
+            t4.style.visibility='hidden';
+            t5.style.visibility='visible';
+        },5000)
+        setTimeout(()=>{
+            t5.style.visibility='hidden';
+            body.style.visibility='hidden';
+        },6000)
+        setTimeout(()=>{
+            let text=document.querySelector('.text');
+        let i=0;
+        function name1(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve('高梦蝶')
+                },1000)
+            })
+        }
+        function text1(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve('遇见你')
+                },1000)
+            })
+        }
+        function text2(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve('很幸运')
+                },1000)
+            })
+        }
+        function text3(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve('')
+                },1000)
+            })
+        }
+        async function main(){
+            text.innerHTML=await text3();
+            text.innerHTML=await text1();
+            text.innerHTML=await text3();
+            text.innerHTML=await text2();
+            text.innerHTML=await text3();
+            text.innerHTML=await name1();
+        }
+        main()
+        setInterval(main,6000)
+        },7000)
+    </script>
+</body>
+</html>
