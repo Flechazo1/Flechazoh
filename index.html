@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>亲爱的小高</title>
     <script src="./js/vue.js" type="text/javascript"></script>
     <style>
         *{
             margin: 0;
             padding: 0;
+            overflow: hidden;
         }
         #main{
-            width: 350px;
-            height: 400px;
+            width: 250px;
+            height: 300px;
             margin: 100px auto;
             position: relative;
             animation: xt 2s linear infinite alternate;
         }
         .circle1{
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             position: absolute;
             top: 0;
@@ -28,8 +29,8 @@
             background-color: red;
         }
         .circle2{
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             position: absolute;
             top: 0;
@@ -39,8 +40,8 @@
         .circle3{
             border-radius: 0;
             position: absolute;
-            top: 75px;
-            left: 75px;
+            top: 50px;
+            left: 50px;
             transform: rotate(45deg);
         }
         .text{
@@ -70,7 +71,7 @@
         }
         .text2{
             margin-top: 5%;
-            margin-left: 800px;
+            margin-left: 48%;
             color: white;
             font-weight: bold;
             font-size: 18px;
@@ -84,7 +85,7 @@
         <div class="text2" id="t2" style="font-size: 25px;margin-top: 4%;margin-left: 45%;">心型</div>
         <div class="text2" id="t3" style="font-size: 15px;margin-top: 5%;margin-left: 38%;">希望你能喜欢</div>
         <div class="text2" id="t4" style="font-size: 30px;margin-top: -5%;margin-left: 48%;">还有</div>
-        <div class="text2" id="t5" style="font-size: 22px;margin-top: 5%;margin-left: 45%;">我不是废物！！</div>
+        <div class="text2" id="t5" style="font-size: 22px;margin-top: 3%;margin-left: 45%;">我不是废物！！</div>
     </div>
     <div id="main">
         <div class="circle1" ></div>
@@ -120,7 +121,7 @@
         setTimeout(()=>{
             t5.style.visibility='hidden';
             body.style.visibility='hidden';
-        },6000)
+        },7000)
         setTimeout(()=>{
             let text=document.querySelector('.text');
         let i=0;
